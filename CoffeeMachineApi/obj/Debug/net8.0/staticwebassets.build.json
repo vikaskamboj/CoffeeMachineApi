@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "H89DpROuHtsWRqKtX3jj9+hVoh1VOFAZQ2c442nDBks=",
+  "Source": "CoffeeMachineApi",
+  "BasePath": "_content/CoffeeMachineApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
