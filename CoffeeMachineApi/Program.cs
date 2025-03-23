@@ -72,6 +72,7 @@ namespace CoffeeMachineApi
             
             builder.Services.AddScoped<ICoffeeService, CoffeeService>();
             builder.Services.AddScoped<IDateTimeProvider, DateTimeProvider>();
+            builder.Services.AddHttpClient<IWeatherService, WeatherService>();
 
             var app = builder.Build();
             app.UseCors("AllowAll");

@@ -27,12 +27,18 @@
   },
   {
     "ContainingType": "CoffeeMachineApi.Controllers.CoffeeMachineController",
-    "Method": "BrewCoffee",
+    "Method": "BrewCoffeeAsync",
     "RelativePath": "api/CoffeeMachine/brew-coffee",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "city",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]

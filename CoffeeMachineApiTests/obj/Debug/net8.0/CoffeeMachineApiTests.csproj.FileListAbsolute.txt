@@ -186,3 +186,8 @@ C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\
 C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\obj\Debug\net8.0\CoffeeMachineApiTests.pdb
 C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\obj\Debug\net8.0\CoffeeMachineApiTests.genruntimeconfig.cache
 C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\obj\Debug\net8.0\ref\CoffeeMachineApiTests.dll
+C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
+C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
+C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\bin\Debug\net8.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\Vikas\Desktop\Vikas\Dev Interview\ReadyTech\ReadyTech_DevTechnicalTest\CoffeeMachineApiTests\obj\Debug\net8.0\CoffeeMachineApiTests.sourcelink.json

@@ -4,6 +4,6 @@ namespace CoffeeMachineApi.Services
 {
     public interface ICoffeeService
     {
-        Task<(bool success, string message)> BrewCoffeeAsync();
+        Task<(bool success, string message)> BrewCoffeeAsync(string city);
     }
 }

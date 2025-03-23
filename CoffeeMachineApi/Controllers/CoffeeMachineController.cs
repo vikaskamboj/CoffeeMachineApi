@@ -17,19 +17,24 @@ namespace CoffeeMachineApi.Controllers
 
         [HttpGet("brew-coffee")]
         [Authorize]
-        public async Task<IActionResult> BrewCoffee()
+        public async Task<IActionResult> BrewCoffeeAsync([FromQuery] string city = "Melbourne")
         {
-            var (success, message) = await _coffeeService.BrewCoffeeAsync();
+            var result = await _coffeeService.BrewCoffeeAsync(city);
 
-            if (message == "418")
-                return StatusCode(418); // I'm a teapot (April 1st)
+            if (!result.success)
+            {
+                return result.message switch
+                {
+                    "418" => StatusCode(418, "I'm a teapot"),
+                    "503" => StatusCode(503, "Service Unavailable"),
+                    _ => StatusCode(500, "Internal Server Error")
+                };
+            }
 
-            if (message == "503")
-                return StatusCode(503); // Service Unavailable (Every 5th request)
-
+            //return Ok(result.message);
             return Ok(new
             {
-                message,
+                message = result.message,
                 prepared = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:sszzz")
             });
         }

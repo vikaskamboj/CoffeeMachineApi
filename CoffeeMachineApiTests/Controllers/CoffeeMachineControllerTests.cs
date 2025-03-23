@@ -12,6 +12,7 @@ namespace CoffeeMachineApiTests.Controllers
         private readonly Mock<ILogger<CoffeeService>> _mockLogger;
         private readonly CoffeeMachineDbContext _dbContext;
         private readonly Mock<IDateTimeProvider> _mockDateTimeProvider;
+        private readonly Mock<IWeatherService> _mockWeatherService;
         private readonly ICoffeeService _coffeeService;
 
         public CoffeeMachineControllerTests()
@@ -24,7 +25,8 @@ namespace CoffeeMachineApiTests.Controllers
             _dbContext = new CoffeeMachineDbContext(options);
             _mockLogger = new Mock<ILogger<CoffeeService>>();
             _mockDateTimeProvider = new Mock<IDateTimeProvider>();
-            _coffeeService = new CoffeeService(_dbContext, _mockDateTimeProvider.Object, _mockLogger.Object);
+            _mockWeatherService = new Mock<IWeatherService>();
+            _coffeeService = new CoffeeService(_dbContext, _mockDateTimeProvider.Object, _mockWeatherService.Object, _mockLogger.Object);
         }
 
         [Fact]
@@ -34,7 +36,7 @@ namespace CoffeeMachineApiTests.Controllers
             var expectedMessage = "Your piping hot coffee is ready";
 
             // Act
-            var result = await _coffeeService.BrewCoffeeAsync();
+            var result = await _coffeeService.BrewCoffeeAsync("");
 
             // Assert
             Assert.True(result.success);
@@ -48,11 +50,11 @@ namespace CoffeeMachineApiTests.Controllers
             // Simulate 4 previous requests
             for (int i = 0; i < 4; i++)
             {
-                await _coffeeService.BrewCoffeeAsync();
+                await _coffeeService.BrewCoffeeAsync("");
             }
 
             // Act
-            var result = await _coffeeService.BrewCoffeeAsync();
+            var result = await _coffeeService.BrewCoffeeAsync("");
 
             // Assert
             Assert.False(result.success);
@@ -66,7 +68,7 @@ namespace CoffeeMachineApiTests.Controllers
             _mockDateTimeProvider.Setup(m => m.Now).Returns(new DateTime(2023, 4, 1)); // April 1st
 
             // Act
-            var result = await _coffeeService.BrewCoffeeAsync();
+            var result = await _coffeeService.BrewCoffeeAsync("");
 
             // Assert
             Assert.False(result.success);

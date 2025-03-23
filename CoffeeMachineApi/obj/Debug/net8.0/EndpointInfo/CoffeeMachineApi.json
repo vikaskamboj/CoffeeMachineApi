@@ -53,6 +53,16 @@
         "tags": [
           "CoffeeMachine"
         ],
+        "parameters": [
+          {
+            "name": "city",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "default": "Melbourne"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK"
